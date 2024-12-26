@@ -71,9 +71,13 @@ export default async function CertificatePage({
             </div>
 
             {/* Download Button */}
-            <div className="p-4 bg-blue-500 font-bold text-white rounded-b-lg text-center cursor-pointer">
+            <Link
+              target="_blank"
+              href={recipientData.downloadLink}
+              className="w-[100%] block p-4 bg-blue-500 font-bold text-white rounded-b-lg text-center cursor-pointer"
+            >
               Download
-            </div>
+            </Link>
           </div>
 
           <div className="w-[100%] flex items-center justify-center gap-8">
