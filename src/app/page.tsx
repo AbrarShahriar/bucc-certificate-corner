@@ -1,3 +1,4 @@
+import IdSubmissionForm from "@/components/IdSubmissionForm";
 import Link from "next/link";
 
 export default function Home() {
@@ -24,19 +25,7 @@ export default function Home() {
         {/* Input */}
         {/* Button */}
         <div className="bg-[rgba(255,255,255,0.1)] gap-4 backdrop-blur-sm  p-8 w-[60%] flex flex-col rounded-lg ">
-          <div className="flex flex-row">
-            <input
-              placeholder="Write your ID"
-              type="text"
-              className="focus-within:outline-none px-4 py-2 w-[70%] rounded-l-lg"
-            />
-            <Link
-              href={"/certificate/dgwrg-3245-fwg"}
-              className="w-[30%] bg-blue-600 rounded-r-lg font-semibold text-white flex items-center justify-center"
-            >
-              <div>Submit</div>
-            </Link>
-          </div>
+          <IdSubmissionForm />
         </div>
         <div>
           <p className="text-center text-white font-semibold">
