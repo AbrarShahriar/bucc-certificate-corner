@@ -5,14 +5,7 @@ import ShareDialogue from "@/components/ShareDialogue";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import CopyButton from "@/components/CopyButton";
-
-const data = {
-  username: "John Doe",
-  id: "12345678",
-  issueDate: "2024-03-25",
-  imageLink: "csd",
-  pdfLink: "cegrte",
-};
+import data from "../../../demo_data.json";
 
 export default async function CertificatePage({
   params,
@@ -21,18 +14,31 @@ export default async function CertificatePage({
 }) {
   const recipientId = (await params).recipientId;
 
+  const recipientData =
+    data.filter((el) => el.recipientId == recipientId)[0] || {};
+
+  if (!recipientData.recipientId) {
+    return (
+      <div className="flex items-center justify-center h-[100vh] text-2xl">
+        Invalid Recipient ID!
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[url('/hero.jpg')] bg-center bg-cover">
       <div className="flex bg- w-[100vw] h-[100vh] items-center p-8 gap-6">
         {/* Certificate Preview */}
         <div className="w-[70%]  pl-8 h-[100%] flex items-center justify-center">
-          <Image
-            src={"/certificate.png"}
-            alt={"certificate"}
-            width={700}
-            height={700}
-            className="object-contain rounded-lg"
-          />
+          {recipientData && (
+            <Image
+              src={recipientData.previewLink}
+              alt={"certificate"}
+              width={700}
+              height={700}
+              className="object-contain rounded-lg"
+            />
+          )}
         </div>
 
         <div className="w-[50%] rounded-lg">
@@ -47,15 +53,19 @@ export default async function CertificatePage({
               <div className="flex flex-col gap-4">
                 <div className="flex items-start justify-between border-b border-white pb-2 font-bold ">
                   <p>Recipient Name</p>
-                  <p>{data.username}</p>
+                  <p>{recipientData ? recipientData.recipientName : "N/A"}</p>
                 </div>
                 <div className="flex items-start justify-between border-b border-white pb-2 font-bold">
                   <p>Recipient ID</p>
-                  <p>{recipientId}</p>
+                  <p>{recipientData ? recipientData.recipientId : "N/A"}</p>
                 </div>
                 <div className="flex items-start justify-between border-b border-white pb-2 font-bold">
                   <p>Issue Date</p>
-                  <p>{parseDate(data.issueDate)}</p>
+                  <p>
+                    {recipientData
+                      ? parseDate(recipientData?.issueDate)
+                      : "N/A"}
+                  </p>
                 </div>
               </div>
             </div>
