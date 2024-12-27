@@ -1,23 +1,32 @@
 [
   {
     "recipientName": "Abrar Shahriar",
+    "recipientEmail": "abrarshahriar321@gmail.com",
     "recipientId": "abcd",
     "issueDate": "2023-06-12",
     "previewLink": "https://marketplace.canva.com/EAFy42rCTA0/1/0/1600w/canva-blue-minimalist-certificate-of-achievement-_asVJz8YgJE.jpg",
-    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf"
+    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf",
+    "fb_share": "facebook.com",
+    "lnkd_share": "linkedin.com"
   },
   {
     "recipientName": "Angkan Dutta",
+    "recipientEmail": "angkandutta@gmail.com",
     "recipientId": "efgh",
     "issueDate": "2021-03-22",
     "previewLink": "https://certifier.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcertifier%2Fimage%2Fupload%2Fv1709650100%2F51_participation_formal_darkviolet_landscape_ff5e55e81a.png&w=3840&q=100",
-    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf"
+    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf",
+    "fb_share": "facebook.com",
+    "lnkd_share": "linkedin.com"
   },
   {
     "recipientName": "Sabbir Bin Abdul Latif",
     "recipientId": "ijkl",
+    "recipientEmail": "sabbir.bin.abdul.latif@gmail.com",
     "issueDate": "2021-02-06",
     "previewLink": "https://img.freepik.com/free-vector/vintage-achievement-certificate-template-vector-professional-design-blue_53876-157583.jpg",
-    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf"
+    "downloadLink": "https://dgda.portal.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/90eb0139_226e_4c2f_b913_51601b589bf0/2022-05-05-05-05-9c3a898740f19fa3cf4d6cba20a978c4.pdf",
+    "fb_share": "facebook.com",
+    "lnkd_share": "linkedin.com"
   }
 ]

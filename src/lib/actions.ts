@@ -1,7 +1,8 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import data from "../demo_data.json";
+import dbConnect from "./dbConnect";
+import Recipient from "@/models/recipients";
 
 export type FormState =
   | {
@@ -22,8 +23,9 @@ export async function submitAction(
     };
   }
 
-  const recipientData =
-    data.filter((el) => el.recipientId == recipientId)[0] || {};
+  await dbConnect();
+
+  const recipientData = await Recipient.findOne({ recipientId }).exec();
 
   if (recipientData) {
     redirect(`/certificate/${recipientId}`);

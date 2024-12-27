@@ -5,17 +5,19 @@ import ShareDialogue from "@/components/ShareDialogue";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 import CopyButton from "@/components/CopyButton";
-import data from "../../../demo_data.json";
+import dbConnect from "@/lib/dbConnect";
+import Recipient from "@/models/recipients";
 
 export default async function CertificatePage({
   params,
 }: {
   params: Promise<{ recipientId: string }>;
 }) {
+  await dbConnect();
+
   const recipientId = (await params).recipientId;
 
-  const recipientData =
-    data.filter((el) => el.recipientId == recipientId)[0] || {};
+  const recipientData = await Recipient.findOne({ recipientId });
 
   if (!recipientData.recipientId) {
     return (
